@@ -3,10 +3,13 @@ import * as ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 
 import App from "./App";
+import Styles from "./Styles";
 
 ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
+  <Styles>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Styles>,
   document.getElementById("root")
 );
