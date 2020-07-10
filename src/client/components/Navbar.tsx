@@ -1,8 +1,19 @@
-import React from "react";
-import { useCss } from "kremling";
+import React, { useState } from "react";
+import { useCss, toggle } from "kremling";
+import Modal from "./Modal";
 
 export default function Navbar() {
   const scope = useCss(css);
+  const [show, setShow] = useState(false);
+
+  let showModal = () => {
+    setShow(true);
+  };
+
+  let hideModal = () => {
+    setShow(false);
+  };
+
   return (
     <header {...scope}>
       <nav>
@@ -14,9 +25,12 @@ export default function Navbar() {
         </ul>
         <div className="container">
           <div>
-            <button>Login</button>
+            <button onClick={() => showModal()}>Login</button>
           </div>
         </div>
+        <Modal show={show} handleClose={hideModal}>
+          <div>Something</div>
+        </Modal>
       </nav>
     </header>
   );
@@ -45,11 +59,13 @@ const css = `
 }
 & li{
     padding:0 .5rem;
+    cursor:pointer;
 }
 & button{
     width:10rem;
     height:50%;
     margin:0 .5rem;
+    cursor:pointer;
 }
 & button:hover{
     background:lightblue;
