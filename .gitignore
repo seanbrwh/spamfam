@@ -5,5 +5,4 @@ yarn-error.log
 yarn.lock
 .env
 *.stackdump
-mongo-init.sh
 mongo-volume

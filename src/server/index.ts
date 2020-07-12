@@ -20,6 +20,7 @@ process.on("uncaughtException", function (err: Error) {
   console.error("Backend error in node server code");
   console.error(err);
 });
+
 connectDB();
 
 app.listen(SERVER_PORT, () => {

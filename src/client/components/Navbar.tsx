@@ -21,7 +21,6 @@ export default function Navbar() {
           <li>features</li>
           <li>pricing</li>
           <li>faq</li>
-          <li>blog</li>
         </ul>
         <div className="container">
           <div>
